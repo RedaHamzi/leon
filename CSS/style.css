@@ -1,0 +1,702 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+::selection{
+  color: white;
+  background-color: var(--mainColor)
+}
+body{
+  background-color: #f3f0f0;
+}
+:root{
+  --mainColor: #10cab7;
+  --headerColor: #2c4755;
+  --mainBox-shadow: 2px 2px 10px 0px #8a795d;
+}
+/*   start component     */
+.main-heading{
+  color: #e3e2e2f3;
+  font-size: 65px;
+  font-weight: 800;
+  text-align: center;
+  margin: 40px auto -40px;
+}
+/*   end component       */
+/*    start header       */
+header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  z-index: 999;
+}
+header .container{
+  width: 98%;
+  margin-left: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .logo{
+  width: 30px;
+  display: flex;
+}
+header .container .logo span:first-child{
+  display: inline-block;
+  width: 4px;
+  height: 21px;
+  background-color: #333;
+  margin-right: 4px;
+}
+header .container .logo span:last-child{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 4px solid var(--mainColor);
+  border-radius: 50%;
+}
+header .container .sand-icon{
+  position: relative
+}
+header .container .sand-icon:hover span:nth-child(2){
+  width: 30px;
+}
+header .container .sand-icon:hover ul{
+  display: block;
+}
+header .container .sand-icon ul::before{
+  content: "";
+  border-bottom: 20px solid white;
+  border-top: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  position: absolute;
+  right: 10px;
+  top: -39px;
+}
+header .container .sand-icon span:first-child{
+  height: 2px;
+  width: 30px;
+  background-color: #333;
+  position: absolute;
+  right: 12px;
+  top: -11px;
+}
+header .container .sand-icon span:nth-child(2){
+  height: 2px;
+  width: 20px;
+  background-color: #333;
+  position: absolute;
+  right: 12px;
+  top: -3px;
+  transition: 0.5s;
+}
+header .container .sand-icon span:last-of-type{
+  height: 2px;
+  width: 30px;
+  background-color: #333;
+  position: absolute;
+  right: 12px;
+  top: 5px;
+}
+
+header .container .sand-icon ul{
+  display: none;
+  width: 150px;
+  background-color: white;
+  list-style: none;
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  border-radius: 15px;
+  transition: 1s;
+  box-shadow: var(--mainBox-shadow);
+}
+header .container .sand-icon ul li{
+  display: block;
+  padding: 20px;
+}
+header .container .sand-icon ul li:not(:last-child){
+  border-bottom: 1px solid var(--headerColor);
+}
+header .container .sand-icon ul li:hover a{
+  padding-left: 20px;
+}
+header .container .sand-icon ul li a{
+  text-decoration: none;
+  color: var(--headerColor);
+  transition: 0.5s;
+}
+
+/*       end of header       */
+/*    start of main section    */
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  background: url(../Images/images.jpeg)  no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100%;
+  height: 90vh;
+  letter-spacing: 1px;
+}
+.main>div{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.main h1{
+  color: var(--mainColor);
+  font-size: 3em;
+}
+.main p{
+  line-height: 1.5;
+  font-size: 0.9em;
+  font-weight: 500;
+  width: 60%;
+  color: white;
+}
+/*           end of main section    */
+
+
+/*        start of cards         */
+.cards{
+  margin: 50px 40px;
+  display: flex;
+  flex-direction: column;
+}
+.cards .card{
+   padding: 20px;
+   height: 43vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   box-shadow: var(--mainBox-shadow);
+   text-transform: capitalize;
+   justify-content: space-evenly;
+   border-radius: 30px;
+   margin-bottom: 50px;
+   transition: 0.7s ease;
+}
+.cards .card:hover{
+  transform: scale(1.05)
+}
+.cards .card .icon{
+  font-size: 3.5em;
+  color: var(--mainColor);
+}
+.cards .card h2{
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--headerColor);
+}
+.cards .card p{
+  text-align: center;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.services>p,
+.about>p,
+.portfolio>p,
+.contact>p{
+  text-align: center;
+  padding: 15px 0 35px;
+}
+.services{
+  padding: 20px;
+}
+.services .container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.services .container .card{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: row;
+  padding: 30px 10px;
+  margin-top: 40px;
+  background-color: white;
+}
+.services .container .card .icon{
+  width: fit-content;
+  color: var(--mainColor);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5px;
+  font-size: 3.3em;
+}
+.services .container .card .info{
+  width: 74%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.services .container .card .info h2,
+.portfolio .container .card .info h2{
+  font-size: 1em;
+  text-align: center;
+  color: var(--headerColor);
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 5px;
+  text-align: left;
+}
+.services .container .card .info p,
+.portfolio .container .card .info p{
+  font-size: 0.7em;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #aba8a8;
+}
+.services .container .montagne{
+  position: relative;
+  width: 280px;
+  height: 40vh;
+  margin: 40px auto;
+}
+.services .container .montagne .background{
+  background-color: #012a24e0;
+  width: 15%;
+  height: 40vh;
+  position: absolute;
+  right: 30PX;
+}
+.services .container .montagne .image{
+  height: 196px;
+  width: 70%;
+  position: absolute;
+  top: 12%;
+  left: 15%;
+  background: url(../MONTAGNE-2.jpg) no-repeat;
+  background-size: contain;
+  background-attachment: scroll;
+  z-index: 99;
+}
+/*        portfolio part          */
+.portfolio{
+  margin-top: 10px;
+  padding: 20px;
+}
+.portfolio .container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.portfolio .container .card{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 60px;
+  background-color: white;
+}
+.portfolio .container .card .image img{
+  width: 100%;
+}
+.portfolio .container .card .info{
+  padding: 10px;
+  text-align: center;
+}
+.portfolio .container .card .info h2{
+  font-size: 0.9em;
+}
+.portfolio .button{
+  width: 150px;
+  margin: 40px auto;
+  background-color: white;
+}
+.portfolio .button a{
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  padding: 10px;
+  text-transform: capitalize;
+  border: 2px solid black;
+  color: #333;
+  font-weight: bolder;
+  text-align: center;
+  border-radius: 5px;
+  letter-spacing: -1px;
+  font-size: 0.9em;
+}
+
+/*       about section     */
+.about{
+  background-color: white;
+  margin-top: 10px;
+  padding: 40px 0;
+}
+.about .container{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about .container .box{
+  position: relative;
+  width: 100%;
+  height: 230px;
+}
+.about .container .box div:first-child{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 142px;
+  box-sizing: content-box;
+  border-bottom: 40px solid var(--mainColor);
+  border-left: 40px solid var(--mainColor);
+}
+.about .container .box div:last-child{
+  position: absolute;
+  bottom: 24px;
+  left: 17px;
+  width: 70%;
+}
+.about .container .box div:last-child img{
+  width: 100%;
+}
+.about .container .info{
+  margin-top: 40px;
+  padding: 20px;
+}
+.about .container .info p{
+  line-height: 1.8;
+}
+.about .container .info p:first-child{
+  padding: 10px 0;
+  font-size: 1.2em;
+  color: var(--headerColor);
+  padding: 0 0 20px;
+  font-weight: 600;
+}
+.about .container .info span{
+  display: block;
+  width: 160px;
+  height: 2px;
+  background-color: var(--mainColor);
+}
+.about .container .info p:last-child{
+  font-size: 0.8em;
+  padding: 10px 0;
+  color: #686868;
+}
+/*        contact section        */
+.contact{
+  margin-top: 10px;
+  padding: 40px 0;
+}
+.contact .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact .container h2{
+  font-size: 1.7em;
+  color: var(--headerColor);
+  padding: 20px 0;
+  text-align: center;
+}
+.contact .container>a{
+  text-decoration: none;
+  font-size: 1.6em;
+  color: var(--mainColor);
+  padding: 10px 0 20px 0px;
+  text-align: center;
+  font-weight: 700;
+}
+.contact .container .social-icon{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contact .container .social-icon p{
+  font-size: 0.7em;
+}
+.contact .container .social-icon a{
+  font-size: 0.9em;
+  color: var(--headerColor);
+  text-decoration: none;
+}
+footer{
+  background-color: var(--headerColor);
+  color: white;
+  text-transform: capitalize;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer a{
+  color: var(--mainColor);
+  text-decoration:none;
+}
+
+@media (min-width: 768px){
+  .services>p,
+  .about>p,
+  .portfolio>p,
+  .contact>p{
+    text-align: center;
+    padding: 5px 0 35px;
+  }
+  .main-heading{
+    color: #ebeaeaf3;
+    font-size: 100px;
+  }
+  .main>div{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .main h1{
+    font-size: 3.5em;
+  }
+  .main p{
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.3em;
+  }
+  .cards{
+    width: 50%;
+    margin: 50px auto;
+  }
+  .services{
+    background-color: white;
+  }
+  .services .container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+  }
+  .services .container .card{
+    margin: 0px;
+  }
+  .services .container>div:first-child{
+    grid-area: 1/1/span 1/span 1;
+  }
+  .services .container>div:nth-child(2){
+    grid-area: 1/2/span 1/span 1;
+  }
+  .services .container>div:nth-child(3){
+    grid-area: 2/1/span 1/span 1;
+  }
+  .services .container>div:nth-child(4){
+    grid-area: 2/2/span 1/span 1;
+  }
+  .services .container>div:last-child{
+    grid-area: 1/3/span 2/span 1;
+    position: relative;
+    width: 100%;
+    height: 37vh;
+    align-self: flex-start;
+  }
+  .services .container .montagne .background {
+    background-color: #012a24e0;
+    height: inherit;
+    width: 20%;
+    position: absolute;
+    right: 30PX;
+  }
+  .services .container .montagne .image {
+    height: 50vh;
+    width: 70%;
+    position: absolute;
+    top: 17%;
+    left: 10%;
+  }
+  .portfolio .container .card{
+    width: 50%;
+  }
+  .portfolio .container .card .icon{
+    padding: 10px;
+  }
+  .about .container{
+    flex-direction: row;
+  }
+  .about .container .info {
+    margin: 40px 0 40px 40px;
+    padding: 20px;
+  }
+  .about .container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .about .container .box {
+    position: relative;
+    width: 100%;
+    height: 147px;
+  }
+  .about .container .box div:first-child{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 119px;
+    box-sizing: content-box;
+  }
+  .about .container .box div:last-child{
+    position: absolute;
+    bottom: -35px;
+    left: -2px;
+    width: 150px;
+  }
+}
+@media (min-width: 1024px){
+  body{
+    background-color: white;
+  }
+  .main h1{
+    font-size: 5em;
+  }
+  .main p{
+    font-size: 1.8em;
+  }
+  .cards{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    margin: 50px auto 0px;
+  }
+  .cards .card{
+    width: calc(92% / 3);
+    padding: 10px;
+    box-shadow: none;
+    margin-bottom: 10px;
+  }
+  .cards>div:nth-child(2){
+    border-radius: 0;
+    border-bottom: 2px solid #c5c5c5;
+  }
+  .cards .card .icon{
+    font-size: 3em;
+  }
+  .cards .card h2{
+    font-size: 1.5em;
+  }
+  .cards .card p{
+    font-size: 0.9em
+  }
+  .services{
+    margin-top: 60px;
+  }
+  .services .container{
+    width: 70%;
+    margin: auto;
+  }
+  .services .container .card .info h2,
+  .portfolio .container .card .info h2{
+    font-size: 1.2em;
+  }
+  .services .container .card .info p,
+  .portfolio .container .card .info p{
+    font-size: 0.9em;
+  }
+  .portfolio,
+  .contact{
+    margin-top: 10px;
+    padding: 100px 20px 10px;
+    background-color: #efefef;
+  }
+  .portfolio .container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 90%;
+    margin: auto;
+    grid-template-rows: auto;
+    gap: 0px 20px;
+  }
+  .portfolio .container .card{
+    width: 100%;
+  }
+  .portfolio .container > div:first-child{
+    grid-area: 1/1/span 1/span 1;
+  }
+  .portfolio .container > div:nth-child(2){
+    grid-area: 1/2/span 1/span 1;
+    align-self: flex-start;
+    padding-bottom: 30px;
+  }
+  .portfolio .container > div:last-child{
+    grid-area: 1/3/span 1/span 1;
+  }
+  .portfolio .button {
+    width: 150px;
+    margin: 40px auto;
+    background-color: white;
+  }
+  .about .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+ .about .container .box {
+    width: 245.75px;
+    position: relative;
+    height: 147px;
+  }
+ .about .container .box div:last-child {
+    position: absolute;
+    bottom: -35px;
+    left: 40px;
+    width: 150px;
+  }
+ .about .container .info {
+    margin: 40px 0 40px 40px;
+    padding: 20px;
+    width: 50%;
+  }
+ .contact .container {
+    padding: 70px 0px;
+    width: 60%;
+    margin: auto;
+    align-items: flex-start;
+  }
+  .contact .container h2{
+    font-size: 2em;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 900;
+  }
+  .contact .container>a{
+    font-size: 1.9em;
+    padding: 10px 0 20px 20px;
+    font-weight: 900;
+  }
+  .contact .container .social-icon{
+    width: 30%;
+    margin-left: 6%;
+  }
+  .contact .container .social-icon p{
+    font-size: 0.9em;
+  }
+  .contact .container .social-icon a {
+    font-size: 1.1em;
+  }
+}
